@@ -13,6 +13,7 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->string('foto_profil')->nullable();
             $table->enum('role', ['admin', 'petugas', 'user']);
             $table->foreignId('wilayah_id')->nullable()->constrained('wilayah')->onDelete('set null');
             $table->timestamps();

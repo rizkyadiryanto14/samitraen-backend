@@ -22,6 +22,7 @@ class User extends Authenticatable
         'email',
         'password',
         'role',
+        'foto_profil'
     ];
 
     /**
@@ -42,4 +43,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function scopeFilterRole($query, $role)
+    {
+        if ($role) {
+            return $query->where('role', $role);
+        }
+    }
 }

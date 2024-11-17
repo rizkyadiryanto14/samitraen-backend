@@ -12,7 +12,7 @@ class CreateLaporanKebakaranTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('wilayah_id')->constrained('wilayah')->onDelete('cascade');
-            $table->enum('status_laporan', ['belum diproses', 'dalam penanganan', 'selesai']);
+            $table->enum('status_laporan', ['received','in_progress', 'dispatched', 'completed']);
             $table->text('deskripsi_laporan')->nullable();
             $table->string('foto_bukti')->nullable();
             $table->timestamps();
