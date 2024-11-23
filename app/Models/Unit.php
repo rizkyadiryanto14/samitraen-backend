@@ -14,4 +14,14 @@ class Unit extends Model
         'wilayah_id',
         'status',
     ];
+     
+    public function wilayah()
+    {
+        return $this->belongsTo(Wilayah::class);
+    }
+
+    public function laporan_kebakaran()
+    {
+        return $this->hasMany(LaporanKebakaran::class);
+    }
 }

@@ -16,19 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/login', [AuthController::class, 'loginView'])->middleware(GuestMiddleware::class)->name('login-view');
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
+//TODO change route type to resource
 Route::group(['middleware' => ['auth', AdminMiddleware::class]], function () {
     Route::get('/', [DashboardController::class, 'index'])->name('home');
-
-    Route::get('/wilayah', [WilayahController::class, 'index'])->name('wilayah.index');
-
-    Route::get('/unit', [UnitController::class, 'index'])->name('unit.index');
-
-    Route::get('/petugas', [PetugasController::class, 'index'])->name('petugas.index');
-
-    Route::get('/user', [UserController::class, 'index'])->name('user.index');
-
+    Route::resource('/wilayah', WilayahController::class);
+    Route::resource('/unit', UnitController::class);
+    Route::resource('/petugas', PetugasController::class);
+    Route::resource('/user', UserController::class);
     Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan.index');
-    
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 

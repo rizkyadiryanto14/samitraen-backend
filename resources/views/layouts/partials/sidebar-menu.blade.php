@@ -9,15 +9,15 @@
 
     <li class="sidenav-item {{Request::is('wilayah*') ? 'active' : ''}}">
         <a href="/wilayah" class="sidenav-link">
-            <i class="sidenav-icon feather icon-clipboard"></i>
+            <i class="sidenav-icon feather icon-map"></i>
             <div>Data Wilayah</div>
         </a>
     </li>
 
     <li class="sidenav-item  {{Request::is('unit*') ? 'active' : ''}}">
         <a href="/unit" class="sidenav-link">
-            <i class="sidenav-icon feather icon-user"></i>
-            <div>Data Unit</div>
+            <i class="sidenav-icon feather icon-shield"></i>
+            <div>Data Unit Pemadam</div>
         </a>
     </li>
 
@@ -29,13 +29,13 @@
     </li>
     <li class="sidenav-item  {{Request::is('user*') ? 'active' : ''}}">
         <a href="/user" class="sidenav-link">
-            <i class="sidenav-icon feather icon-users"></i>
+            <i class="sidenav-icon feather icon-user"></i>
             <div>Data User</div>
         </a>
     </li>
     <li class="sidenav-item  {{Request::is('laporan*') ? 'active' : ''}}">
         <a href="/laporan" class="sidenav-link">
-            <i class="sidenav-icon feather icon-users"></i>
+            <i class="sidenav-icon feather icon-file-text"></i>
             <div>Data Laporan</div>
         </a>
     </li>

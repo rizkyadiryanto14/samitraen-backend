@@ -8,7 +8,7 @@
                 <!-- Brand demo (see assets/css/demo/demo.css) -->
                 <div class="app-brand demo">
                     <span class="app-brand-logo demo">
-                        <img src="assets/img/logo.png" alt="Brand Logo" class="img-fluid">
+                        <img src="{{ asset('assets/img/logo.png') }}" alt="Brand Logo" class="img-fluid">
                     </span>
                     <a href="index.html" class="app-brand-text demo sidenav-text font-weight-normal ml-2">Samitraen</a>
                     {{-- <a href="javascript:" class="layout-sidenav-toggle sidenav-link text-large ml-auto">
@@ -30,7 +30,7 @@
                     <!-- Brand demo (see assets/css/demo/demo.css) -->
                     <a href="index.html" class="navbar-brand app-brand demo d-lg-none py-0 mr-4">
                         <span class="app-brand-logo demo">
-                            <img src="assets/img/logo-dark.png" alt="Brand Logo" class="img-fluid">
+                            <img src="{{ asset('assets/img/logo-dark.png') }}" alt="Brand Logo" class="img-fluid">
                         </span>
                         <span class="app-brand-text demo font-weight-normal ml-2">Samitraen</span>
                     </a>
@@ -132,7 +132,7 @@
                             <div class="demo-navbar-user nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
                                     <span class="d-inline-flex flex-lg-row-reverse align-items-center align-middle">
-                                        <img src="assets/img/avatars/1.png" alt class="d-block ui-w-30 rounded-circle">
+                                        <img src="{{ asset('assets/img/avatars/1.png') }}" alt class="d-block ui-w-30 rounded-circle">
                                         <span class="px-1 mr-lg-2 ml-2 ml-lg-0">{{ Auth::user()->name }}</span>
                                     </span>
                                 </a>
@@ -161,9 +161,7 @@
                         <h4 class="font-weight-bold py-3 mb-0">@yield('section-title')</h4>
                         <div class="text-muted small mt-0 mb-4 d-block breadcrumb">
                             <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="#"><i class="feather icon-home"></i>
-                                        @yield('section-path')</a></li>
-
+                                @yield('section-path')</a></li>
                             </ol>
                         </div>
                         @yield('content')

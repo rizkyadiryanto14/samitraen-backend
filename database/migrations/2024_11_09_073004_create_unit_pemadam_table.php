@@ -12,7 +12,7 @@ class CreateUnitPemadamTable extends Migration
             $table->id();
             $table->string('nama_unit');
             $table->foreignId('wilayah_id')->constrained('wilayah')->onDelete('cascade');
-            $table->boolean('status')->default(true);
+            $table->boolean('status')->default(true); //1 = ready, 0 = on duty
             $table->timestamps();
         });
     }

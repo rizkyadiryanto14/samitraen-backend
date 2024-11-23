@@ -38,6 +38,8 @@
                                    
                                 </tbody>
                             </table>
+                            <!-- Pagination Links -->
+                            <div> {{ $listPetugas->links() }}</div>
                         </div>
                     </div>
                 </div>

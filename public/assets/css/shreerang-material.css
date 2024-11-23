@@ -9376,6 +9376,7 @@ a.bg-linux-darker:hover, a.bg-linux-darker:focus {
 }
 .sidenav.bg-white .sidenav-item.active > .sidenav-link:not(.sidenav-toggle) {
   background-color: #f9f9f9;
+  color: #ff530d;
 }
 .sidenav.bg-white.sidenav-horizontal .sidenav-menu > .sidenav-item.active > .sidenav-link:not(.sidenav-toggle) {
   background-color: #f3f3f3;

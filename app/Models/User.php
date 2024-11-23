@@ -22,7 +22,8 @@ class User extends Authenticatable
         'email',
         'password',
         'role',
-        'foto_profil'
+        'foto_profil',
+        'wilayah_id',
     ];
 
     /**
@@ -44,10 +45,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function wilayah(){
+        return $this->belongsTo(Wilayah::class);
+    }
+
     public function scopeFilterRole($query, $role)
     {
         if ($role) {
             return $query->where('role', $role);
         }
     }
+
 }

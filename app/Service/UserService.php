@@ -6,9 +6,9 @@ use App\Models\User;
 
 class UserService
 {
-    public function getUsers(array $data = [])
+    public function getUsers(array $filters = [])
     {
-        $users = User::filterRole(@$data['role'])->orderBy('id', 'desc');
+        $users = User::with('wilayah')->filterRole(@$filters['role'])->orderBy('id', 'desc');
         return $users;
     }
 }
