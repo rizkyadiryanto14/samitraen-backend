@@ -45,8 +45,7 @@
                                         <td>{{ $petugas->wilayah->nama_wilayah ?? '-' }}</td>
                                         <td><a href="{{ route('petugas.edit', $petugas->id) }}"
                                                 class="btn btn-warning btn-sm">Edit</a>
-                                            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
-                                                data-target="#modal-edit-petugas-{{ $petugas->id }}">Delete</button>
+                                            <button type="button" class="btn btn-danger btn-sm deletePetugas" data-id="{{ $petugas->id }}" data-toggle="modal" data-target="#modal-delete-petugas">Delete</button>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -59,4 +58,41 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="modal-delete-petugas" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Delete Petugas</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <p>Apakah anda yakin ingin menghapus petugas ini?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                    <form action="" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-primary">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection
+
+@section('js')
+<script>
+    $('.deletePetugas').on('click', function() {
+        $('#modal-delete-petugas form').attr('action', 'petugas/' + $(this).data('id'));
+    });
+
+    $('#modal-delete-petugas').on('hidden.bs.modal', function() {
+        $('#modal-delete-petugas form').attr('action', '');
+    });
+</script>
 @endsection

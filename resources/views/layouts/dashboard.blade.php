@@ -10,7 +10,7 @@
                     <span class="app-brand-logo demo">
                         <img src="{{ asset('assets/img/logo.png') }}" alt="Brand Logo" class="img-fluid">
                     </span>
-                    <a href="index.html" class="app-brand-text demo sidenav-text font-weight-normal ml-2">Samitraen</a>
+                    <a href="/" class="app-brand-text demo sidenav-text font-weight-normal ml-2">Samitraen</a>
                     {{-- <a href="javascript:" class="layout-sidenav-toggle sidenav-link text-large ml-auto">
                     <i class="ion ion-md-menu align-middle"></i>
                 </a> --}}
@@ -28,7 +28,7 @@
                     id="layout-navbar">
 
                     <!-- Brand demo (see assets/css/demo/demo.css) -->
-                    <a href="index.html" class="navbar-brand app-brand demo d-lg-none py-0 mr-4">
+                    <a href="/" class="navbar-brand app-brand demo d-lg-none py-0 mr-4">
                         <span class="app-brand-logo demo">
                             <img src="{{ asset('assets/img/logo-dark.png') }}" alt="Brand Logo" class="img-fluid">
                         </span>

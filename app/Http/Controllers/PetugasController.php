@@ -2,16 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StorePetugasRequest;
+use App\Http\Requests\UpdatePetugasRequest;
 use App\Service\UserService;
+use App\Service\WilayahService;
+use Exception;
 use Illuminate\Http\Request;
 
 class PetugasController extends Controller
 {
-    protected $userService;
+    protected $userService, $wilayahService;
 
-    public function __construct(UserService $userService)
+    public function __construct(UserService $userService, WilayahService $wilayahService)
     {
         $this->userService = $userService;
+        $this->wilayahService = $wilayahService;
     }
 
     public function index(Request $request)
@@ -23,52 +28,63 @@ class PetugasController extends Controller
 
     public function create()
     {
-        return view('petugas.create');
+        $wilayah = $this->wilayahService->getWilayah()->get();
+        return view('petugas.create')->with(['wilayah' => $wilayah]);
     }
 
-    public function store(Request $request)
+    public function store(StorePetugasRequest $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users',
-            'password' => 'required|confirmed',
-        ]);
-
-        $this->userService->createUser(array_merge($request->all(), ['role' => 'petugas']));
-
-        return redirect()->route('petugas.index');
+        try {
+            $validated = $request->validated();
+            // Simpan foto profil
+            if (@$validated['foto_profil']) {
+                $validated['foto_profil'] = $request->file('foto_profil')->store('profile_pictures', 'public');
+            }
+            $validated['role'] = 'petugas';
+            $this->userService->createUser($validated);
+            return redirect()->route('petugas.index')->with(['success' => 'Data berhasil ditambah']);
+        } catch (Exception $e) {
+            return back()->with('error', $e->getMessage());
+        }
     }
 
     public function show($id)
     {
-        $petugas = $this->userService->getUserById($id);
-
+        $petugas = $this->userService->getUserByField('id', $id);
         return view('petugas.show')->with(['petugas' => $petugas]);
     }
 
     public function edit($id)
     {
-        $petugas = $this->userService->getUserById($id);
-
-        return view('petugas.edit')->with(['petugas' => $petugas]);
+        $wilayah = $this->wilayahService->getWilayah()->get();
+        $petugas = $this->userService->getUserByField('id', $id);
+        return view('petugas.edit')->with(['petugas' => $petugas, 'wilayah' => $wilayah]);
     }
 
-    public function update(Request $request, $id)
+    public function update(UpdatePetugasRequest $request, $id)
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|unique:users,email,' . $id,
-        ]);
-
-        $this->userService->updateUser($id, $request->all());
-
-        return redirect()->route('petugas.index');
+        try {
+            $validated = $request->validated();
+            if (@$validated['foto_profil']) {
+                $validated['foto_profil'] = $request->file('foto_profil')->store('profile_pictures', 'public');
+            }
+            $user = $this->userService->getUserByField('id', $id);
+            $this->userService->updateUser($user, $validated);
+            return redirect()->route('petugas.index')->with(['success' => 'Data berhasil diubah']);
+        } catch (Exception $e) {
+            return back()->with('error', $e->getMessage());
+        }
     }
 
     public function destroy($id)
     {
-        $this->userService->deleteUser($id);
+        try {
+            $user = $this->userService->getUserByField('id', $id);
+            $this->userService->deleteUser($user);
 
-        return redirect()->route('petugas.index');
+            return redirect()->route('petugas.index')->with(['success' => 'Data berhasil dihapus']);
+        } catch (Exception $e) {
+            return back()->with('error', $e->getMessage());
+        }
     }
 }

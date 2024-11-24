@@ -66,18 +66,18 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modal-delete-unit" tabindex="-1">
+    <div class="modal fade" id="modal-delete-petugas" tabindex="-1">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Delete Unit</h5>
+                    <h5 class="modal-title">Delete Petugas</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
 
                 <div class="modal-body">
-                    <p>Apakah anda yakin ingin menghapus unit pemadam ini?</p>
+                    <p>Apakah anda yakin ingin menghapus petugas ini?</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>

@@ -58,7 +58,7 @@ class UnitController extends Controller
         }
     }
 
-    public function update(Request $request, $id)
+    public function update(UnitRequest $request, $id)
     {
         try {
             $unit = $this->unitService->getUnitByField('id', $id);

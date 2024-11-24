@@ -1,35 +1,26 @@
 @extends('layouts.dashboard')
 
 @section('title')
-    Tambah Data Petugas
+    Tambah Data User
 @endsection
 
 @section('section-title')
-    Tambah Data Petugas
+    Tambah Data User
 @endsection
 
 @section('section-path')
     <li class="breadcrumb-item"><a href="/"><i class="feather icon-home"></i></a></li>
-    <li class="breadcrumb-item active"><a href="/petugas">Data Petugas</a></li>
+    <li class="breadcrumb-item active"><a href="/user">Data User</a></li>
     <li class="breadcrumb-item active"><a href="#">Tambah Data</a></li>
 @endsection
 
 @section('content')
     @include('layouts.partials.notif')
     <div class="card mb-4">
-        <h6 class="card-header">Tambah Data Petugas</h6>
+        <h6 class="card-header">Tambah Data User</h6>
         <div class="card-body">
-            <form action="/petugas" method="POST" enctype="multipart/form-data">
+            <form action="/user" method="POST" enctype="multipart/form-data">
                 @csrf
-                <div class="form-group">
-                    <label class="form-label">Wilayah</label>
-                    <select class="form-control" name="wilayah_id" required>
-                        @foreach ($wilayah as $w)
-                            <option value="{{ $w->id }}">{{ $w->nama_wilayah }}</option>
-                        @endforeach
-                    </select>
-                    <div class="clearfix"></div>
-                </div>
                 <div class="form-group">
                     <label class="form-label">Nama</label>
                     <input name="name" type="text" class="form-control" placeholder="Nama Lengkap" required>

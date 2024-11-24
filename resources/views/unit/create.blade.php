@@ -15,6 +15,7 @@
 @endsection
 
 @section('content')
+    @include('layouts.partials.notif')
     <div class="card mb-4">
         <h6 class="card-header">Tambah Data Unit Pemadam</h6>
         <div class="card-body">
