@@ -2,6 +2,7 @@
 
 namespace App\Service;
 
+use App\Http\Resources\UserResource;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -29,14 +30,7 @@ class AuthService
                 //create sanctum token
                 $token = $user->createToken('auth_token')->plainTextToken;
                 $user->load('wilayah');
-                $user->transform(function ($user) {
-                    return [
-                        'name' => $user->name,
-                        'email' => $user->email,
-                        'role' => $user->role,
-                        'wilayah' => @$user->wilayah->nama_wilayah,
-                    ];
-                });
+                $user = new UserResource($user);
                 return [
                     'access_token' => $token,
                     'user' => $user,

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "56a70290-8868-4704-b8e6-95d31a71d3e5",
+        "_postman_id": "6c8ea570-ada3-4512-a33e-ede1575ae401",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -20,7 +20,7 @@
             "description": "",
             "item": [
                 {
-                    "name": "POST api\/register",
+                    "name": "Register a user",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -41,9 +41,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"e\",\"email\":\"wiegand.callie@example.com\",\"password\":\"G&@9=_\"}"
+                            "raw": "{\"name\":\"xzvmdliigixjttdttoq\",\"email\":\"cartwright.elsie@example.com\",\"password\":\"%k*TG#\\\/\"}"
                         },
-                        "description": "",
+                        "description": "This endpoint lets you create a user.",
                         "auth": {
                             "type": "noauth"
                         }
@@ -51,7 +51,7 @@
                     "response": []
                 },
                 {
-                    "name": "POST api\/login",
+                    "name": "Login",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -72,12 +72,216 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"inader@example.org\",\"password\":\"suscipit\"}"
+                            "raw": "{\"email\":\"renee.brown@example.org\",\"password\":\"eum\"}"
                         },
-                        "description": "",
+                        "description": "This endpoint lets you create a user.",
                         "auth": {
                             "type": "noauth"
                         }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "GET api\/pelapor\/profil",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/pelapor\/profil",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/pelapor\/profil"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "PUT api\/pelapor\/profil",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/pelapor\/profil",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/pelapor\/profil"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "officia",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "hartmann.paris@example.com",
+                                    "type": "text",
+                                    "description": "Must be a valid email address."
+                                },
+                                {
+                                    "key": "foto_profil",
+                                    "src": [],
+                                    "type": "file"
+                                },
+                                {
+                                    "key": "_method",
+                                    "value": "PUT",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Petugas",
+            "description": "",
+            "item": [
+                {
+                    "name": "Get Petugas Profile",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/petugas\/profil",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/petugas\/profil"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Get the profile of the authenticated user"
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update Petugas Profile",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/petugas\/profil",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/petugas\/profil"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "name",
+                                    "value": "consequuntur",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "email",
+                                    "value": "mpadberg@example.com",
+                                    "type": "text",
+                                    "description": "Must be a valid email address."
+                                },
+                                {
+                                    "key": "wilayah_id",
+                                    "value": "dolorem",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "foto_profil",
+                                    "src": [],
+                                    "type": "file"
+                                },
+                                {
+                                    "key": "_method",
+                                    "value": "PUT",
+                                    "type": "text"
+                                }
+                            ]
+                        },
+                        "description": "Update the profile of the authenticated user"
                     },
                     "response": []
                 }
@@ -85,6 +289,18 @@
         }
     ],
     "auth": {
-        "type": "noauth"
+        "type": "apikey",
+        "apikey": [
+            {
+                "key": "in",
+                "value": "header",
+                "type": "string"
+            },
+            {
+                "key": "key",
+                "value": "Authorization",
+                "type": "string"
+            }
+        ]
     }
 }

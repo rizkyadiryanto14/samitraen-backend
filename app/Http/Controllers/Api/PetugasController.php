@@ -5,13 +5,16 @@ namespace App\Http\Controllers\Api;
 use App\Helpers\ResponseHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdatePetugasRequest;
-use App\Http\Requests\UpdateUserRequest;
 use App\Http\Resources\UserResource;
 use App\Service\UserService;
 use Exception;
 use Illuminate\Support\Facades\Auth;
 
-class UserController extends Controller
+/**
+ * @group Petugas
+ * @authenticated
+ */
+class PetugasController extends Controller
 {
     protected $userService;
 
@@ -19,7 +22,15 @@ class UserController extends Controller
     {
         $this->userService = $userService;
     }
-
+    /**
+     * Get Petugas Profile
+     * 
+     * Get the profile of the authenticated user
+     * 
+     * @authenticated 
+     * 
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function getProfile()
     {
         try{
@@ -33,7 +44,17 @@ class UserController extends Controller
     }
 
 
-    public function updateProfile(UpdateUserRequest $request)
+    /**
+     * Update Petugas Profile
+     * 
+     * Update the profile of the authenticated user
+     * 
+     * @authenticated
+     * 
+     * @param \App\Http\Requests\UpdatePetugasRequest $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function updateProfile(UpdatePetugasRequest $request)
     {
         try{
             $validated = $request->validated();

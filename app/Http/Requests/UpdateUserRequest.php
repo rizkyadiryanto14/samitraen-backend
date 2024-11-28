@@ -22,21 +22,22 @@ class UpdateUserRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required',
-            'email' => 'required|email|unique:users,email,' . $this->route('user'),
-            'foto_profil' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'name'          => 'required',
+            'email'         => 'required|email|unique:users,email,' . $this->route('user'),
+            'foto_profil'   => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'password'      => 'sometimes',
         ];
     }
 
     public function messages()
     {
         return [
-            'name.required' => 'Nama harus diisi',
-            'email.required' => 'Email harus diisi',
-            'email.unique' => 'Email sudah terdaftar',
+            'name.required'     => 'Nama harus diisi',
+            'email.required'    => 'Email harus diisi',
+            'email.unique'      => 'Email sudah terdaftar',
             'foto_profil.image' => 'File harus berupa gambar',
             'foto_profil.mimes' => 'Format gambar harus jpeg, png, jpg, atau gif',
-            'foto_profil.max' => 'Ukuran gambar maksimal 2MB',
+            'foto_profil.max'   => 'Ukuran gambar maksimal 2MB',
         ];
     }
 }

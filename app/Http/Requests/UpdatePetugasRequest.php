@@ -22,10 +22,11 @@ class UpdatePetugasRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name' => 'required',
-            'email' => 'required|email|unique:users,email,' . $this->route('petuga'),
-            'wilayah_id' => 'required',
-            'foto_profil' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'name'          => 'required',
+            'email'         => 'required|email|unique:users,email,' . $this->route('petuga'),
+            'wilayah_id'    => 'required',
+            'foto_profil'   => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'password'      => 'sometimes',
         ];
     }
 

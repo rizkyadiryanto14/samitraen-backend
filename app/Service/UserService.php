@@ -4,6 +4,7 @@ namespace App\Service;
 
 use App\Models\User;
 use Exception;
+use Illuminate\Support\Facades\Hash;
 
 class UserService
 {
@@ -13,9 +14,10 @@ class UserService
         return $users;
     }
 
-    public function getUserByField($field, $value){
+    public function getUserByField($field, $value)
+    {
         $user = User::where($field, $value)->first();
-        if(empty($user)){
+        if (empty($user)) {
             throw new Exception('User Not Found');
         }
 
@@ -30,13 +32,15 @@ class UserService
 
     public function deleteUser(User $user)
     {
-       $user->delete();
+        $user->delete();
     }
 
     public function updateUser(User $user, array $data = [])
     {
+        if (!empty($data['password'])) {
+            $data['password'] = Hash::make($data['password']);
+        }
         $user->update($data);
         return $user;
     }
-
 }

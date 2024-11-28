@@ -9,9 +9,9 @@ servers:
 paths:
   /api/register:
     post:
-      summary: ''
-      operationId: postApiRegister
-      description: ''
+      summary: 'Register a user'
+      operationId: registerAUser
+      description: 'This endpoint lets you create a user.'
       parameters: []
       responses: {  }
       tags:
@@ -26,17 +26,17 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: e
+                  example: xzvmdliigixjttdttoq
                   nullable: false
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: wiegand.callie@example.com
+                  example: cartwright.elsie@example.com
                   nullable: false
                 password:
                   type: string
                   description: 'Must be at least 6 characters.'
-                  example: 'G&@9=_'
+                  example: '%k*TG#/'
                   nullable: false
               required:
                 - name
@@ -45,9 +45,9 @@ paths:
       security: []
   /api/login:
     post:
-      summary: ''
-      operationId: postApiLogin
-      description: ''
+      summary: Login
+      operationId: login
+      description: 'This endpoint lets you create a user.'
       parameters: []
       responses: {  }
       tags:
@@ -62,18 +62,155 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: inader@example.org
+                  example: renee.brown@example.org
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: suscipit
+                  example: eum
                   nullable: false
               required:
                 - email
                 - password
       security: []
+  /api/pelapor/profil:
+    get:
+      summary: ''
+      operationId: getApiPelaporProfil
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+    put:
+      summary: ''
+      operationId: putApiPelaporProfil
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: officia
+                  nullable: false
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: hartmann.paris@example.com
+                  nullable: false
+                foto_profil:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
+                password:
+                  type: string
+                  description: ''
+                  example: null
+                  nullable: false
+              required:
+                - name
+                - email
+  /api/petugas/profil:
+    get:
+      summary: 'Get Petugas Profile'
+      operationId: getPetugasProfile
+      description: 'Get the profile of the authenticated user'
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Petugas
+    put:
+      summary: 'Update Petugas Profile'
+      operationId: updatePetugasProfile
+      description: 'Update the profile of the authenticated user'
+      parameters: []
+      responses: {  }
+      tags:
+        - Petugas
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: consequuntur
+                  nullable: false
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: mpadberg@example.com
+                  nullable: false
+                wilayah_id:
+                  type: string
+                  description: ''
+                  example: dolorem
+                  nullable: false
+                foto_profil:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: true
+                password:
+                  type: string
+                  description: ''
+                  example: null
+                  nullable: false
+              required:
+                - name
+                - email
+                - wilayah_id
 tags:
   -
     name: Endpoints
     description: ''
+  -
+    name: Petugas
+    description: ''
+components:
+  securitySchemes:
+    default:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: 'You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.'
+security:
+  -
+    default: []
