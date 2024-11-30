@@ -1,0 +1,330 @@
+name: Pelapor
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/pelapor/profil
+    metadata:
+      groupName: Pelapor
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get Profil Pelapor'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - cfkg6v64a1e3aZd8h5DVPEb
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PUT
+    uri: api/pelapor/profil
+    metadata:
+      groupName: Pelapor
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update Profil Pelapor'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        name: name
+        description: ''
+        required: true
+        example: inventore
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      email:
+        name: email
+        description: 'Must be a valid email address.'
+        required: true
+        example: frippin@example.org
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      foto_profil:
+        name: foto_profil
+        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+        required: false
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        custom: []
+      password:
+        name: password
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      name: inventore
+      email: frippin@example.org
+    fileParameters:
+      foto_profil: null
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - k6g6E3hZcV1aebf8da5DPv4
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - POST
+    uri: api/pelapor/pelaporan
+    metadata:
+      groupName: Pelapor
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create Laporan'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Content-Type: multipart/form-data
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      foto_bukti:
+        name: foto_bukti
+        description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+        required: true
+        example: null
+        type: file
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      deskripsi_laporan:
+        name: deskripsi_laporan
+        description: ''
+        required: true
+        example: officiis
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      latitude:
+        name: latitude
+        description: 'Must match the regex /^(\+|-)?(?:90(?:\.0{1,15})?|[0-9]{1,2}(?:\.[0-9]{1,15})?)$/.'
+        required: true
+        example: '-:90:.00000000000|7:.7281640)'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      longitude:
+        name: longitude
+        description: 'Must match the regex /^(\+|-)?(?:180(?:\.0{1,15})?|((1[0-7][0-9]|[0-9]{1,2})(\.[0-9]{1,15})?))$/.'
+        required: true
+        example: '|176))'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      no_hp:
+        name: no_hp
+        description: ''
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      deskripsi_laporan: officiis
+      latitude: '-:90:.00000000000|7:.7281640)'
+      longitude: '|176))'
+    fileParameters:
+      foto_bukti: null
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - eDbvk613c5ZEVfd4a6h8gaP
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/pelapor/pelaporan/riwayat
+    metadata:
+      groupName: Pelapor
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get Riwayat Laporan'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      is_paginate:
+        name: is_paginate
+        description: 'default 0'
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      per_page:
+        name: per_page
+        description: 'default 10'
+        required: false
+        example: 19
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      is_paginate: true
+      per_page: 19
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 4f81gDcekZb5daah6PvV3E6
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/pelapor/pelaporan/{id_laporan}'
+    metadata:
+      groupName: Pelapor
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get Detail Laporan'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id_laporan:
+        name: id_laporan
+        description: 'The ID of the Laporan.'
+        required: true
+        example: '1'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id_laporan: '1'
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - EaeDV4586b3PfZ1c6kagvdh
+    controller: null
+    method: null
+    route: null
+    custom: []

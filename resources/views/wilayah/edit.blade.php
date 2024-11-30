@@ -50,7 +50,7 @@
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
     <script>
-        var map = L.map('map').setView([-8.96725, 117.19954], 10);
+        var map = L.map('map').setView([-8.96725, 117.19954], 18);
         
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {

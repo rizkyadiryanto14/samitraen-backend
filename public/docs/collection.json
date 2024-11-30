@@ -10,17 +10,17 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "6c8ea570-ada3-4512-a33e-ede1575ae401",
+        "_postman_id": "e33ffe82-56e4-450a-b617-783a215a09ff",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
         {
-            "name": "Endpoints",
+            "name": "Auth",
             "description": "",
             "item": [
                 {
-                    "name": "Register a user",
+                    "name": "Register",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"xzvmdliigixjttdttoq\",\"email\":\"cartwright.elsie@example.com\",\"password\":\"%k*TG#\\\/\"}"
+                            "raw": "{\"name\":\"bjsmjxdtutae\",\"email\":\"wcormier@example.com\",\"password\":\"^Iy]!6@2J&'EQa<wf\"}"
                         },
                         "description": "This endpoint lets you create a user.",
                         "auth": {
@@ -72,7 +72,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"renee.brown@example.org\",\"password\":\"eum\"}"
+                            "raw": "{\"email\":\"rice.alisa@example.com\",\"password\":\"magnam\"}"
                         },
                         "description": "This endpoint lets you create a user.",
                         "auth": {
@@ -80,9 +80,15 @@
                         }
                     },
                     "response": []
-                },
+                }
+            ]
+        },
+        {
+            "name": "Pelapor",
+            "description": "",
+            "item": [
                 {
-                    "name": "GET api\/pelapor\/profil",
+                    "name": "Get Profil Pelapor",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -127,7 +133,7 @@
                     ]
                 },
                 {
-                    "name": "PUT api\/pelapor\/profil",
+                    "name": "Update Profil Pelapor",
                     "request": {
                         "url": {
                             "host": "{{baseUrl}}",
@@ -151,13 +157,13 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "officia",
+                                    "value": "inventore",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "email",
-                                    "value": "hartmann.paris@example.com",
+                                    "value": "frippin@example.org",
                                     "type": "text",
                                     "description": "Must be a valid email address."
                                 },
@@ -176,6 +182,169 @@
                         "description": ""
                     },
                     "response": []
+                },
+                {
+                    "name": "Create Laporan",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/pelapor\/pelaporan",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/pelapor\/pelaporan"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "multipart\/form-data"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "formdata",
+                            "formdata": [
+                                {
+                                    "key": "deskripsi_laporan",
+                                    "value": "officiis",
+                                    "type": "text",
+                                    "description": ""
+                                },
+                                {
+                                    "key": "latitude",
+                                    "value": "-:90:.00000000000|7:.7281640)",
+                                    "type": "text",
+                                    "description": "Must match the regex \/^(\\+|-)?(?:90(?:\\.0{1,15})?|[0-9]{1,2}(?:\\.[0-9]{1,15})?)$\/."
+                                },
+                                {
+                                    "key": "longitude",
+                                    "value": "|176))",
+                                    "type": "text",
+                                    "description": "Must match the regex \/^(\\+|-)?(?:180(?:\\.0{1,15})?|((1[0-7][0-9]|[0-9]{1,2})(\\.[0-9]{1,15})?))$\/."
+                                },
+                                {
+                                    "key": "foto_bukti",
+                                    "src": [],
+                                    "type": "file"
+                                }
+                            ]
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Riwayat Laporan",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/pelapor\/pelaporan\/riwayat",
+                            "query": [
+                                {
+                                    "key": "is_paginate",
+                                    "value": "1",
+                                    "description": "default 0",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "per_page",
+                                    "value": "19",
+                                    "description": "default 10",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/pelapor\/pelaporan\/riwayat?is_paginate=1&per_page=19"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Detail Laporan",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/pelapor\/pelaporan\/:id_laporan",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/pelapor\/pelaporan\/:id_laporan",
+                            "variable": [
+                                {
+                                    "id": "id_laporan",
+                                    "key": "id_laporan",
+                                    "value": "1",
+                                    "description": "The ID of the Laporan."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
                 }
             ]
         },
@@ -253,21 +422,15 @@
                             "formdata": [
                                 {
                                     "key": "name",
-                                    "value": "consequuntur",
+                                    "value": "mollitia",
                                     "type": "text",
                                     "description": ""
                                 },
                                 {
                                     "key": "email",
-                                    "value": "mpadberg@example.com",
+                                    "value": "bveum@example.org",
                                     "type": "text",
                                     "description": "Must be a valid email address."
-                                },
-                                {
-                                    "key": "wilayah_id",
-                                    "value": "dolorem",
-                                    "type": "text",
-                                    "description": ""
                                 },
                                 {
                                     "key": "foto_profil",
@@ -284,6 +447,338 @@
                         "description": "Update the profile of the authenticated user"
                     },
                     "response": []
+                },
+                {
+                    "name": "Get Laporan Terbaru",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/petugas\/pelaporan\/terbaru",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/petugas\/pelaporan\/terbaru"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Riwayat Laporan",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/petugas\/pelaporan\/riwayat",
+                            "query": [
+                                {
+                                    "key": "is_paginate",
+                                    "value": "",
+                                    "description": "default 0",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "per_page",
+                                    "value": "14",
+                                    "description": "default 10",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "status",
+                                    "value": "quaerat",
+                                    "description": "default received",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "wilayah_id",
+                                    "value": "10",
+                                    "description": "default null",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "unit_id",
+                                    "value": "13",
+                                    "description": "default null",
+                                    "disabled": false
+                                },
+                                {
+                                    "key": "search",
+                                    "value": "atque",
+                                    "description": "default null",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/petugas\/pelaporan\/riwayat?is_paginate=&per_page=14&status=quaerat&wilayah_id=10&unit_id=13&search=atque"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Detail Laporan",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/petugas\/pelaporan\/:id_laporan",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/petugas\/pelaporan\/:id_laporan",
+                            "variable": [
+                                {
+                                    "id": "id_laporan",
+                                    "key": "id_laporan",
+                                    "value": "1",
+                                    "description": "The ID of the Laporan."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update Laporan",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/petugas\/pelaporan\/:id_laporan\/status",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/petugas\/pelaporan\/:id_laporan\/status",
+                            "variable": [
+                                {
+                                    "id": "id_laporan",
+                                    "key": "id_laporan",
+                                    "value": "1",
+                                    "description": "The ID of the Laporan."
+                                }
+                            ]
+                        },
+                        "method": "PATCH",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"status\":\"in_progress\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Wilayah",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/petugas\/wilayah",
+                            "query": [
+                                {
+                                    "key": "is_paginate",
+                                    "value": "",
+                                    "description": "default 0",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "per_page",
+                                    "value": "19",
+                                    "description": "default 10",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/petugas\/wilayah?is_paginate=&per_page=19"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Get Unit",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/petugas\/unit",
+                            "query": [
+                                {
+                                    "key": "is_paginate",
+                                    "value": "",
+                                    "description": "default 0",
+                                    "disabled": true
+                                },
+                                {
+                                    "key": "per_page",
+                                    "value": "16",
+                                    "description": "default 10",
+                                    "disabled": false
+                                }
+                            ],
+                            "raw": "{{baseUrl}}\/api\/petugas\/unit?is_paginate=&per_page=16"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
                 }
             ]
         }

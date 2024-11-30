@@ -9,13 +9,13 @@ servers:
 paths:
   /api/register:
     post:
-      summary: 'Register a user'
-      operationId: registerAUser
+      summary: Register
+      operationId: register
       description: 'This endpoint lets you create a user.'
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - Auth
       requestBody:
         required: true
         content:
@@ -26,17 +26,17 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: xzvmdliigixjttdttoq
+                  example: bjsmjxdtutae
                   nullable: false
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: cartwright.elsie@example.com
+                  example: wcormier@example.com
                   nullable: false
                 password:
                   type: string
                   description: 'Must be at least 6 characters.'
-                  example: '%k*TG#/'
+                  example: "^Iy]!6@2J&'EQa<wf"
                   nullable: false
               required:
                 - name
@@ -51,7 +51,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - Auth
       requestBody:
         required: true
         content:
@@ -62,12 +62,12 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: renee.brown@example.org
+                  example: rice.alisa@example.com
                   nullable: false
                 password:
                   type: string
                   description: ''
-                  example: eum
+                  example: magnam
                   nullable: false
               required:
                 - email
@@ -75,8 +75,8 @@ paths:
       security: []
   /api/pelapor/profil:
     get:
-      summary: ''
-      operationId: getApiPelaporProfil
+      summary: 'Get Profil Pelapor'
+      operationId: getProfilPelapor
       description: ''
       parameters: []
       responses:
@@ -93,15 +93,15 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
+        - Pelapor
     put:
-      summary: ''
-      operationId: putApiPelaporProfil
+      summary: 'Update Profil Pelapor'
+      operationId: updateProfilPelapor
       description: ''
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - Pelapor
       requestBody:
         required: true
         content:
@@ -112,12 +112,12 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: officia
+                  example: inventore
                   nullable: false
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: hartmann.paris@example.com
+                  example: frippin@example.org
                   nullable: false
                 foto_profil:
                   type: string
@@ -132,6 +132,125 @@ paths:
               required:
                 - name
                 - email
+  /api/pelapor/pelaporan:
+    post:
+      summary: 'Create Laporan'
+      operationId: createLaporan
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Pelapor
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                foto_bukti:
+                  type: string
+                  format: binary
+                  description: 'Must be an image. Must not be greater than 2048 kilobytes.'
+                  nullable: false
+                deskripsi_laporan:
+                  type: string
+                  description: ''
+                  example: officiis
+                  nullable: false
+                latitude:
+                  type: string
+                  description: 'Must match the regex /^(\+|-)?(?:90(?:\.0{1,15})?|[0-9]{1,2}(?:\.[0-9]{1,15})?)$/.'
+                  example: '-:90:.00000000000|7:.7281640)'
+                  nullable: false
+                longitude:
+                  type: string
+                  description: 'Must match the regex /^(\+|-)?(?:180(?:\.0{1,15})?|((1[0-7][0-9]|[0-9]{1,2})(\.[0-9]{1,15})?))$/.'
+                  example: '|176))'
+                  nullable: false
+                no_hp:
+                  type: string
+                  description: ''
+                  example: null
+                  nullable: false
+              required:
+                - foto_bukti
+                - deskripsi_laporan
+                - latitude
+                - longitude
+  /api/pelapor/pelaporan/riwayat:
+    get:
+      summary: 'Get Riwayat Laporan'
+      operationId: getRiwayatLaporan
+      description: ''
+      parameters:
+        -
+          in: query
+          name: is_paginate
+          description: 'default 0'
+          example: true
+          required: false
+          schema:
+            type: boolean
+            description: 'default 0'
+            example: true
+            nullable: false
+        -
+          in: query
+          name: per_page
+          description: 'default 10'
+          example: 19
+          required: false
+          schema:
+            type: integer
+            description: 'default 10'
+            example: 19
+            nullable: false
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Pelapor
+  '/api/pelapor/pelaporan/{id_laporan}':
+    get:
+      summary: 'Get Detail Laporan'
+      operationId: getDetailLaporan
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Pelapor
+    parameters:
+      -
+        in: path
+        name: id_laporan
+        description: 'The ID of the Laporan.'
+        example: '1'
+        required: true
+        schema:
+          type: string
   /api/petugas/profil:
     get:
       summary: 'Get Petugas Profile'
@@ -171,17 +290,12 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: consequuntur
+                  example: mollitia
                   nullable: false
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: mpadberg@example.com
-                  nullable: false
-                wilayah_id:
-                  type: string
-                  description: ''
-                  example: dolorem
+                  example: bveum@example.org
                   nullable: false
                 foto_profil:
                   type: string
@@ -196,10 +310,276 @@ paths:
               required:
                 - name
                 - email
-                - wilayah_id
+  /api/petugas/pelaporan/terbaru:
+    get:
+      summary: 'Get Laporan Terbaru'
+      operationId: getLaporanTerbaru
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Petugas
+  /api/petugas/pelaporan/riwayat:
+    get:
+      summary: 'Get Riwayat Laporan'
+      operationId: getRiwayatLaporan
+      description: ''
+      parameters:
+        -
+          in: query
+          name: is_paginate
+          description: 'default 0'
+          example: false
+          required: false
+          schema:
+            type: boolean
+            description: 'default 0'
+            example: false
+            nullable: false
+        -
+          in: query
+          name: per_page
+          description: 'default 10'
+          example: 14
+          required: false
+          schema:
+            type: integer
+            description: 'default 10'
+            example: 14
+            nullable: false
+        -
+          in: query
+          name: status
+          description: 'default received'
+          example: quaerat
+          required: false
+          schema:
+            type: string
+            description: 'default received'
+            example: quaerat
+            nullable: false
+        -
+          in: query
+          name: wilayah_id
+          description: 'default null'
+          example: 10
+          required: false
+          schema:
+            type: integer
+            description: 'default null'
+            example: 10
+            nullable: false
+        -
+          in: query
+          name: unit_id
+          description: 'default null'
+          example: 13
+          required: false
+          schema:
+            type: integer
+            description: 'default null'
+            example: 13
+            nullable: false
+        -
+          in: query
+          name: search
+          description: 'default null'
+          example: atque
+          required: false
+          schema:
+            type: string
+            description: 'default null'
+            example: atque
+            nullable: false
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Petugas
+  '/api/petugas/pelaporan/{id_laporan}':
+    get:
+      summary: 'Get Detail Laporan'
+      operationId: getDetailLaporan
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Petugas
+    parameters:
+      -
+        in: path
+        name: id_laporan
+        description: 'The ID of the Laporan.'
+        example: '1'
+        required: true
+        schema:
+          type: string
+  '/api/petugas/pelaporan/{id_laporan}/status':
+    patch:
+      summary: 'Update Laporan'
+      operationId: updateLaporan
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - Petugas
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                unit_id:
+                  type: string
+                  description: 'The <code>id</code> of an existing record in the unit_pemadam table.'
+                  example: null
+                  nullable: false
+                status:
+                  type: string
+                  description: ''
+                  example: in_progress
+                  nullable: false
+                  enum:
+                    - received
+                    - in_progress
+                    - dispatched
+                    - completed
+    parameters:
+      -
+        in: path
+        name: id_laporan
+        description: 'The ID of the Laporan.'
+        example: '1'
+        required: true
+        schema:
+          type: string
+  /api/petugas/wilayah:
+    get:
+      summary: 'Get Wilayah'
+      operationId: getWilayah
+      description: ''
+      parameters:
+        -
+          in: query
+          name: is_paginate
+          description: 'default 0'
+          example: false
+          required: false
+          schema:
+            type: boolean
+            description: 'default 0'
+            example: false
+            nullable: false
+        -
+          in: query
+          name: per_page
+          description: 'default 10'
+          example: 19
+          required: false
+          schema:
+            type: integer
+            description: 'default 10'
+            example: 19
+            nullable: false
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Petugas
+  /api/petugas/unit:
+    get:
+      summary: 'Get Unit'
+      operationId: getUnit
+      description: ''
+      parameters:
+        -
+          in: query
+          name: is_paginate
+          description: 'default 0'
+          example: false
+          required: false
+          schema:
+            type: boolean
+            description: 'default 0'
+            example: false
+            nullable: false
+        -
+          in: query
+          name: per_page
+          description: 'default 10'
+          example: 16
+          required: false
+          schema:
+            type: integer
+            description: 'default 10'
+            example: 16
+            nullable: false
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Petugas
 tags:
   -
-    name: Endpoints
+    name: Auth
+    description: ''
+  -
+    name: Pelapor
     description: ''
   -
     name: Petugas

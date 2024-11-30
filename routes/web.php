@@ -23,7 +23,7 @@ Route::group(['middleware' => ['auth', AdminMiddleware::class]], function () {
     Route::resource('/unit', UnitController::class);
     Route::resource('/petugas', PetugasController::class);
     Route::resource('/user', UserController::class);
-    Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan.index');
+    Route::resource('/laporan', LaporanController::class);
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 });
 

@@ -32,9 +32,12 @@
     <link rel="stylesheet" href="{{ asset('assets/css/shreerang-material.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/uikit.css') }}">
 
+    <!-- Libs -->
+    <link rel="stylesheet" href="{{ asset('assets/libs/perfect-scrollbar/perfect-scrollbar.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/libs/flot/flot.css') }}">
+
     <!-- Page -->
     <link rel="stylesheet" href="{{ asset('assets/css/pages/authentication.css') }}">
-
     <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
     @yield('css')
 </head>
@@ -55,6 +58,16 @@
     <script src="{{ asset('assets/js/layout-helpers.js') }}"></script>
     <script src="{{ asset('assets/js/material-ripple.js') }}"></script>
     <script src="{{ asset('assets/js/demo.js') }}"></script>
+
+     <!-- Libs -->
+     <script src="{{ asset('assets/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
+     <script src="{{ asset('assets/libs/eve/eve.js') }}"></script>
+     <script src="{{ asset('assets/libs/flot/flot.js') }}"></script>
+     <script src="{{ asset('assets/libs/flot/curvedLines.js') }}"></script>
+     <script src="{{ asset('assets/libs/chart-am4/core.js') }}"></script>
+     <script src="{{ asset('assets/libs/chart-am4/charts.js') }}"></script>
+     <script src="{{ asset('assets/libs/chart-am4/animated.js') }}"></script>
+
     @yield('js')
 </body>
 

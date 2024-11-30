@@ -22,6 +22,7 @@ class AuthController extends Controller
      *
      * This endpoint lets you create a user.
      * @unauthenticated
+     * @group Auth
      */
     public function register(RegisterAccountRequest $request)
     {
@@ -39,6 +40,7 @@ class AuthController extends Controller
      *
      * This endpoint lets you create a user.
      * @unauthenticated
+     * @group Auth
      */
     public function login(LoginRequest $request)
     {

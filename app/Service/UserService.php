@@ -26,6 +26,9 @@ class UserService
 
     public function createUser(array $data = [])
     {
+        if (@$data['foto_profil']) {
+            $data['foto_profil'] = $data['foto_profil']->store('profile_pictures', 'public');
+        }
         $user = User::create($data);
         return $user;
     }
@@ -39,6 +42,9 @@ class UserService
     {
         if (!empty($data['password'])) {
             $data['password'] = Hash::make($data['password']);
+        }
+        if (@$data['foto_profil']) {
+            $data['foto_profil'] = $data['foto_profil']->store('profile_pictures', 'public');
         }
         $user->update($data);
         return $user;

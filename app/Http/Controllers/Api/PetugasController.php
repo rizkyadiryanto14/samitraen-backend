@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Helpers\ResponseHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdatePetugasRequest;
+use App\Http\Requests\UpdateUserProfileRequest;
 use App\Http\Resources\UserResource;
 use App\Service\UserService;
 use Exception;
@@ -54,7 +55,7 @@ class PetugasController extends Controller
      * @param \App\Http\Requests\UpdatePetugasRequest $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function updateProfile(UpdatePetugasRequest $request)
+    public function updateProfile(UpdateUserProfileRequest $request)
     {
         try{
             $validated = $request->validated();

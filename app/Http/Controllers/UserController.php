@@ -36,10 +36,6 @@ class UserController extends Controller
     {
         try {
             $validated = $request->validated();
-            // Simpan foto profil
-            if (@$validated['foto_profil']) {
-                $validated['foto_profil'] = $request->file('foto_profil')->store('profile_pictures', 'public');
-            }
             $validated['role'] = 'user';
             $this->userService->createUser($validated);
             return redirect()->route('user.index')->with(['success' => 'Data berhasil ditambah']);
@@ -64,9 +60,6 @@ class UserController extends Controller
     {
         try {
             $validated = $request->validated();
-            if (@$validated['foto_profil']) {
-                $validated['foto_profil'] = $request->file('foto_profil')->store('profile_pictures', 'public');
-            }
             $user = $this->userService->getUserByField('id', $id);
             $this->userService->updateUser($user, $validated);
             return redirect()->route('user.index')->with(['success' => 'Data berhasil diubah']);

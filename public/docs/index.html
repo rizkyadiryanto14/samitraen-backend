@@ -66,22 +66,38 @@
                     <a href="#authenticating-requests">Authenticating requests</a>
                 </li>
                             </ul>
-                    <ul id="tocify-header-endpoints" class="tocify-header">
-                <li class="tocify-item level-1" data-unique="endpoints">
-                    <a href="#endpoints">Endpoints</a>
+                    <ul id="tocify-header-auth" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="auth">
+                    <a href="#auth">Auth</a>
                 </li>
-                                    <ul id="tocify-subheader-endpoints" class="tocify-subheader">
-                                                    <li class="tocify-item level-2" data-unique="endpoints-POSTapi-register">
-                                <a href="#endpoints-POSTapi-register">Register a user</a>
+                                    <ul id="tocify-subheader-auth" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="auth-POSTapi-register">
+                                <a href="#auth-POSTapi-register">Register</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-POSTapi-login">
-                                <a href="#endpoints-POSTapi-login">Login</a>
+                                                                                <li class="tocify-item level-2" data-unique="auth-POSTapi-login">
+                                <a href="#auth-POSTapi-login">Login</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-GETapi-pelapor-profil">
-                                <a href="#endpoints-GETapi-pelapor-profil">GET api/pelapor/profil</a>
+                                                                        </ul>
+                            </ul>
+                    <ul id="tocify-header-pelapor" class="tocify-header">
+                <li class="tocify-item level-1" data-unique="pelapor">
+                    <a href="#pelapor">Pelapor</a>
+                </li>
+                                    <ul id="tocify-subheader-pelapor" class="tocify-subheader">
+                                                    <li class="tocify-item level-2" data-unique="pelapor-GETapi-pelapor-profil">
+                                <a href="#pelapor-GETapi-pelapor-profil">Get Profil Pelapor</a>
                             </li>
-                                                                                <li class="tocify-item level-2" data-unique="endpoints-PUTapi-pelapor-profil">
-                                <a href="#endpoints-PUTapi-pelapor-profil">PUT api/pelapor/profil</a>
+                                                                                <li class="tocify-item level-2" data-unique="pelapor-PUTapi-pelapor-profil">
+                                <a href="#pelapor-PUTapi-pelapor-profil">Update Profil Pelapor</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="pelapor-POSTapi-pelapor-pelaporan">
+                                <a href="#pelapor-POSTapi-pelapor-pelaporan">Create Laporan</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="pelapor-GETapi-pelapor-pelaporan-riwayat">
+                                <a href="#pelapor-GETapi-pelapor-pelaporan-riwayat">Get Riwayat Laporan</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="pelapor-GETapi-pelapor-pelaporan--id_laporan-">
+                                <a href="#pelapor-GETapi-pelapor-pelaporan--id_laporan-">Get Detail Laporan</a>
                             </li>
                                                                         </ul>
                             </ul>
@@ -96,6 +112,24 @@
                                                                                 <li class="tocify-item level-2" data-unique="petugas-PUTapi-petugas-profil">
                                 <a href="#petugas-PUTapi-petugas-profil">Update Petugas Profile</a>
                             </li>
+                                                                                <li class="tocify-item level-2" data-unique="petugas-GETapi-petugas-pelaporan-terbaru">
+                                <a href="#petugas-GETapi-petugas-pelaporan-terbaru">Get Laporan Terbaru</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="petugas-GETapi-petugas-pelaporan-riwayat">
+                                <a href="#petugas-GETapi-petugas-pelaporan-riwayat">Get Riwayat Laporan</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="petugas-GETapi-petugas-pelaporan--id_laporan-">
+                                <a href="#petugas-GETapi-petugas-pelaporan--id_laporan-">Get Detail Laporan</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="petugas-PATCHapi-petugas-pelaporan--id_laporan--status">
+                                <a href="#petugas-PATCHapi-petugas-pelaporan--id_laporan--status">Update Laporan</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="petugas-GETapi-petugas-wilayah">
+                                <a href="#petugas-GETapi-petugas-wilayah">Get Wilayah</a>
+                            </li>
+                                                                                <li class="tocify-item level-2" data-unique="petugas-GETapi-petugas-unit">
+                                <a href="#petugas-GETapi-petugas-unit">Get Unit</a>
+                            </li>
                                                                         </ul>
                             </ul>
             </div>
@@ -107,7 +141,7 @@
     </ul>
 
     <ul class="toc-footer" id="last-updated">
-        <li>Last updated: November 28, 2024</li>
+        <li>Last updated: November 30, 2024</li>
     </ul>
 </div>
 
@@ -127,11 +161,11 @@ You can switch the language used with the tabs at the top right (or from the nav
 <p>All authenticated endpoints are marked with a <code>requires authentication</code> badge in the documentation below.</p>
 <p>You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.</p>
 
-        <h1 id="endpoints">Endpoints</h1>
+        <h1 id="auth">Auth</h1>
 
     
 
-                                <h2 id="endpoints-POSTapi-register">Register a user</h2>
+                                <h2 id="auth-POSTapi-register">Register</h2>
 
 <p>
 </p>
@@ -148,9 +182,9 @@ You can switch the language used with the tabs at the top right (or from the nav
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"name\": \"xzvmdliigixjttdttoq\",
-    \"email\": \"cartwright.elsie@example.com\",
-    \"password\": \"%k*TG#\\/\"
+    \"name\": \"bjsmjxdtutae\",
+    \"email\": \"wcormier@example.com\",
+    \"password\": \"^Iy]!6@2J&amp;\'EQa&lt;wf\"
 }"
 </code></pre></div>
 
@@ -166,9 +200,9 @@ const headers = {
 };
 
 let body = {
-    "name": "xzvmdliigixjttdttoq",
-    "email": "cartwright.elsie@example.com",
-    "password": "%k*TG#\/"
+    "name": "bjsmjxdtutae",
+    "email": "wcormier@example.com",
+    "password": "^Iy]!6@2J&amp;'EQa&lt;wf"
 };
 
 fetch(url, {
@@ -257,10 +291,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="POSTapi-register"
-               value="xzvmdliigixjttdttoq"
+               value="bjsmjxdtutae"
                data-component="body">
     <br>
-<p>Must not be greater than 255 characters. Example: <code>xzvmdliigixjttdttoq</code></p>
+<p>Must not be greater than 255 characters. Example: <code>bjsmjxdtutae</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -268,10 +302,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-register"
-               value="cartwright.elsie@example.com"
+               value="wcormier@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>cartwright.elsie@example.com</code></p>
+<p>Must be a valid email address. Example: <code>wcormier@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -279,14 +313,14 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-register"
-               value="%k*TG#/"
+               value="^Iy]!6@2J&'EQa<wf"
                data-component="body">
     <br>
-<p>Must be at least 6 characters. Example: <code>%k*TG#/</code></p>
+<p>Must be at least 6 characters. Example: <code>^Iy]!6@2J&amp;'EQa&lt;wf</code></p>
         </div>
         </form>
 
-                    <h2 id="endpoints-POSTapi-login">Login</h2>
+                    <h2 id="auth-POSTapi-login">Login</h2>
 
 <p>
 </p>
@@ -303,8 +337,8 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
-    \"email\": \"renee.brown@example.org\",
-    \"password\": \"eum\"
+    \"email\": \"rice.alisa@example.com\",
+    \"password\": \"magnam\"
 }"
 </code></pre></div>
 
@@ -320,8 +354,8 @@ const headers = {
 };
 
 let body = {
-    "email": "renee.brown@example.org",
-    "password": "eum"
+    "email": "rice.alisa@example.com",
+    "password": "magnam"
 };
 
 fetch(url, {
@@ -410,10 +444,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="POSTapi-login"
-               value="renee.brown@example.org"
+               value="rice.alisa@example.com"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>renee.brown@example.org</code></p>
+<p>Must be a valid email address. Example: <code>rice.alisa@example.com</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -421,14 +455,18 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="password"                data-endpoint="POSTapi-login"
-               value="eum"
+               value="magnam"
                data-component="body">
     <br>
-<p>Example: <code>eum</code></p>
+<p>Example: <code>magnam</code></p>
         </div>
         </form>
 
-                    <h2 id="endpoints-GETapi-pelapor-profil">GET api/pelapor/profil</h2>
+                <h1 id="pelapor">Pelapor</h1>
+
+    
+
+                                <h2 id="pelapor-GETapi-pelapor-profil">Get Profil Pelapor</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -566,7 +604,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
             </div>
                         </form>
 
-                    <h2 id="endpoints-PUTapi-pelapor-profil">PUT api/pelapor/profil</h2>
+                    <h2 id="pelapor-PUTapi-pelapor-profil">Update Profil Pelapor</h2>
 
 <p>
 <small class="badge badge-darkred">requires authentication</small>
@@ -584,9 +622,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Authorization: Bearer {token}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "name=officia"\
-    --form "email=hartmann.paris@example.com"\
-    --form "foto_profil=@C:\Users\ROBBY\AppData\Local\Temp\php8A23.tmp" </code></pre></div>
+    --form "name=inventore"\
+    --form "email=frippin@example.org"\
+    --form "foto_profil=@C:\Users\ROBBY\AppData\Local\Temp\phpCCCC.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -601,8 +639,8 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('name', 'officia');
-body.append('email', 'hartmann.paris@example.com');
+body.append('name', 'inventore');
+body.append('email', 'frippin@example.org');
 body.append('foto_profil', document.querySelector('input[name="foto_profil"]').files[0]);
 
 fetch(url, {
@@ -702,10 +740,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-pelapor-profil"
-               value="officia"
+               value="inventore"
                data-component="body">
     <br>
-<p>Example: <code>officia</code></p>
+<p>Example: <code>inventore</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -713,10 +751,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="PUTapi-pelapor-profil"
-               value="hartmann.paris@example.com"
+               value="frippin@example.org"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>hartmann.paris@example.com</code></p>
+<p>Must be a valid email address. Example: <code>frippin@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>foto_profil</code></b>&nbsp;&nbsp;
@@ -727,7 +765,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be an image. Must not be greater than 2048 kilobytes. Example: <code>C:\Users\ROBBY\AppData\Local\Temp\php8A23.tmp</code></p>
+<p>Must be an image. Must not be greater than 2048 kilobytes. Example: <code>C:\Users\ROBBY\AppData\Local\Temp\phpCCCC.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -741,6 +779,523 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
         </div>
         </form>
+
+                    <h2 id="pelapor-POSTapi-pelapor-pelaporan">Create Laporan</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-POSTapi-pelapor-pelaporan">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request POST \
+    "http://localhost:8000/api/pelapor/pelaporan" \
+    --header "Authorization: Bearer {token}" \
+    --header "Content-Type: multipart/form-data" \
+    --header "Accept: application/json" \
+    --form "deskripsi_laporan=officiis"\
+    --form "latitude=-:90:.00000000000|7:.7281640)"\
+    --form "longitude=|176))"\
+    --form "foto_bukti=@C:\Users\ROBBY\AppData\Local\Temp\phpCCCD.tmp" </code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/pelapor/pelaporan"
+);
+
+const headers = {
+    "Authorization": "Bearer {token}",
+    "Content-Type": "multipart/form-data",
+    "Accept": "application/json",
+};
+
+const body = new FormData();
+body.append('deskripsi_laporan', 'officiis');
+body.append('latitude', '-:90:.00000000000|7:.7281640)');
+body.append('longitude', '|176))');
+body.append('foto_bukti', document.querySelector('input[name="foto_bukti"]').files[0]);
+
+fetch(url, {
+    method: "POST",
+    headers,
+    body,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-POSTapi-pelapor-pelaporan">
+</span>
+<span id="execution-results-POSTapi-pelapor-pelaporan" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-POSTapi-pelapor-pelaporan"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-POSTapi-pelapor-pelaporan"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-POSTapi-pelapor-pelaporan" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-POSTapi-pelapor-pelaporan">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-POSTapi-pelapor-pelaporan" data-method="POST"
+      data-path="api/pelapor/pelaporan"
+      data-authed="1"
+      data-hasfiles="1"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('POSTapi-pelapor-pelaporan', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-POSTapi-pelapor-pelaporan"
+                    onclick="tryItOut('POSTapi-pelapor-pelaporan');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-POSTapi-pelapor-pelaporan"
+                    onclick="cancelTryOut('POSTapi-pelapor-pelaporan');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-POSTapi-pelapor-pelaporan"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-black">POST</small>
+            <b><code>api/pelapor/pelaporan</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="POSTapi-pelapor-pelaporan"
+               value="Bearer {token}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {token}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="POSTapi-pelapor-pelaporan"
+               value="multipart/form-data"
+               data-component="header">
+    <br>
+<p>Example: <code>multipart/form-data</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="POSTapi-pelapor-pelaporan"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>foto_bukti</code></b>&nbsp;&nbsp;
+<small>file</small>&nbsp;
+ &nbsp;
+                <input type="file" style="display: none"
+                              name="foto_bukti"                data-endpoint="POSTapi-pelapor-pelaporan"
+               value=""
+               data-component="body">
+    <br>
+<p>Must be an image. Must not be greater than 2048 kilobytes. Example: <code>C:\Users\ROBBY\AppData\Local\Temp\phpCCCD.tmp</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>deskripsi_laporan</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="deskripsi_laporan"                data-endpoint="POSTapi-pelapor-pelaporan"
+               value="officiis"
+               data-component="body">
+    <br>
+<p>Example: <code>officiis</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>latitude</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="latitude"                data-endpoint="POSTapi-pelapor-pelaporan"
+               value="-:90:.00000000000|7:.7281640)"
+               data-component="body">
+    <br>
+<p>Must match the regex /^(+|-)?(?:90(?:.0{1,15})?|[0-9]{1,2}(?:.[0-9]{1,15})?)$/. Example: <code>-:90:.00000000000|7:.7281640)</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>longitude</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="longitude"                data-endpoint="POSTapi-pelapor-pelaporan"
+               value="|176))"
+               data-component="body">
+    <br>
+<p>Must match the regex /^(+|-)?(?:180(?:.0{1,15})?|((1[0-7][0-9]|[0-9]{1,2})(.[0-9]{1,15})?))$/. Example: <code>|176))</code></p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>no_hp</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="no_hp"                data-endpoint="POSTapi-pelapor-pelaporan"
+               value=""
+               data-component="body">
+    <br>
+
+        </div>
+        </form>
+
+                    <h2 id="pelapor-GETapi-pelapor-pelaporan-riwayat">Get Riwayat Laporan</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-pelapor-pelaporan-riwayat">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/pelapor/pelaporan/riwayat?is_paginate=1&amp;per_page=19" \
+    --header "Authorization: Bearer {token}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/pelapor/pelaporan/riwayat"
+);
+
+const params = {
+    "is_paginate": "1",
+    "per_page": "19",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
+const headers = {
+    "Authorization": "Bearer {token}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-pelapor-pelaporan-riwayat">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-pelapor-pelaporan-riwayat" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-pelapor-pelaporan-riwayat"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-pelapor-pelaporan-riwayat"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-pelapor-pelaporan-riwayat" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-pelapor-pelaporan-riwayat">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-pelapor-pelaporan-riwayat" data-method="GET"
+      data-path="api/pelapor/pelaporan/riwayat"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-pelapor-pelaporan-riwayat', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-pelapor-pelaporan-riwayat"
+                    onclick="tryItOut('GETapi-pelapor-pelaporan-riwayat');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-pelapor-pelaporan-riwayat"
+                    onclick="cancelTryOut('GETapi-pelapor-pelaporan-riwayat');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-pelapor-pelaporan-riwayat"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/pelapor/pelaporan/riwayat</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-pelapor-pelaporan-riwayat"
+               value="Bearer {token}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {token}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-pelapor-pelaporan-riwayat"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-pelapor-pelaporan-riwayat"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>is_paginate</code></b>&nbsp;&nbsp;
+<small>boolean</small>&nbsp;
+<i>optional</i> &nbsp;
+                <label data-endpoint="GETapi-pelapor-pelaporan-riwayat" style="display: none">
+            <input type="radio" name="is_paginate"
+                   value="1"
+                   data-endpoint="GETapi-pelapor-pelaporan-riwayat"
+                   data-component="query"             >
+            <code>true</code>
+        </label>
+        <label data-endpoint="GETapi-pelapor-pelaporan-riwayat" style="display: none">
+            <input type="radio" name="is_paginate"
+                   value="0"
+                   data-endpoint="GETapi-pelapor-pelaporan-riwayat"
+                   data-component="query"             >
+            <code>false</code>
+        </label>
+    <br>
+<p>default 0 Example: <code>true</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="per_page"                data-endpoint="GETapi-pelapor-pelaporan-riwayat"
+               value="19"
+               data-component="query">
+    <br>
+<p>default 10 Example: <code>19</code></p>
+            </div>
+                </form>
+
+                    <h2 id="pelapor-GETapi-pelapor-pelaporan--id_laporan-">Get Detail Laporan</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-pelapor-pelaporan--id_laporan-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/pelapor/pelaporan/1" \
+    --header "Authorization: Bearer {token}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/pelapor/pelaporan/1"
+);
+
+const headers = {
+    "Authorization": "Bearer {token}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-pelapor-pelaporan--id_laporan-">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-pelapor-pelaporan--id_laporan-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-pelapor-pelaporan--id_laporan-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-pelapor-pelaporan--id_laporan-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-pelapor-pelaporan--id_laporan-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-pelapor-pelaporan--id_laporan-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-pelapor-pelaporan--id_laporan-" data-method="GET"
+      data-path="api/pelapor/pelaporan/{id_laporan}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-pelapor-pelaporan--id_laporan-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-pelapor-pelaporan--id_laporan-"
+                    onclick="tryItOut('GETapi-pelapor-pelaporan--id_laporan-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-pelapor-pelaporan--id_laporan-"
+                    onclick="cancelTryOut('GETapi-pelapor-pelaporan--id_laporan-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-pelapor-pelaporan--id_laporan-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/pelapor/pelaporan/{id_laporan}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-pelapor-pelaporan--id_laporan-"
+               value="Bearer {token}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {token}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-pelapor-pelaporan--id_laporan-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-pelapor-pelaporan--id_laporan-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id_laporan</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="id_laporan"                data-endpoint="GETapi-pelapor-pelaporan--id_laporan-"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the Laporan. Example: <code>1</code></p>
+            </div>
+                    </form>
 
                 <h1 id="petugas">Petugas</h1>
 
@@ -902,10 +1457,9 @@ You can check the Dev Tools console for debugging information.</code></pre>
     --header "Authorization: Bearer {token}" \
     --header "Content-Type: multipart/form-data" \
     --header "Accept: application/json" \
-    --form "name=consequuntur"\
-    --form "email=mpadberg@example.com"\
-    --form "wilayah_id=dolorem"\
-    --form "foto_profil=@C:\Users\ROBBY\AppData\Local\Temp\php8A02.tmp" </code></pre></div>
+    --form "name=mollitia"\
+    --form "email=bveum@example.org"\
+    --form "foto_profil=@C:\Users\ROBBY\AppData\Local\Temp\phpCC7D.tmp" </code></pre></div>
 
 
 <div class="javascript-example">
@@ -920,9 +1474,8 @@ const headers = {
 };
 
 const body = new FormData();
-body.append('name', 'consequuntur');
-body.append('email', 'mpadberg@example.com');
-body.append('wilayah_id', 'dolorem');
+body.append('name', 'mollitia');
+body.append('email', 'bveum@example.org');
 body.append('foto_profil', document.querySelector('input[name="foto_profil"]').files[0]);
 
 fetch(url, {
@@ -1022,10 +1575,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="name"                data-endpoint="PUTapi-petugas-profil"
-               value="consequuntur"
+               value="mollitia"
                data-component="body">
     <br>
-<p>Example: <code>consequuntur</code></p>
+<p>Example: <code>mollitia</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>email</code></b>&nbsp;&nbsp;
@@ -1033,21 +1586,10 @@ You can check the Dev Tools console for debugging information.</code></pre>
  &nbsp;
                 <input type="text" style="display: none"
                               name="email"                data-endpoint="PUTapi-petugas-profil"
-               value="mpadberg@example.com"
+               value="bveum@example.org"
                data-component="body">
     <br>
-<p>Must be a valid email address. Example: <code>mpadberg@example.com</code></p>
-        </div>
-                <div style=" padding-left: 28px;  clear: unset;">
-            <b style="line-height: 2;"><code>wilayah_id</code></b>&nbsp;&nbsp;
-<small>string</small>&nbsp;
- &nbsp;
-                <input type="text" style="display: none"
-                              name="wilayah_id"                data-endpoint="PUTapi-petugas-profil"
-               value="dolorem"
-               data-component="body">
-    <br>
-<p>Example: <code>dolorem</code></p>
+<p>Must be a valid email address. Example: <code>bveum@example.org</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>foto_profil</code></b>&nbsp;&nbsp;
@@ -1058,7 +1600,7 @@ You can check the Dev Tools console for debugging information.</code></pre>
                value=""
                data-component="body">
     <br>
-<p>Must be an image. Must not be greater than 2048 kilobytes. Example: <code>C:\Users\ROBBY\AppData\Local\Temp\php8A02.tmp</code></p>
+<p>Must be an image. Must not be greater than 2048 kilobytes. Example: <code>C:\Users\ROBBY\AppData\Local\Temp\phpCC7D.tmp</code></p>
         </div>
                 <div style=" padding-left: 28px;  clear: unset;">
             <b style="line-height: 2;"><code>password</code></b>&nbsp;&nbsp;
@@ -1072,6 +1614,1044 @@ You can check the Dev Tools console for debugging information.</code></pre>
 
         </div>
         </form>
+
+                    <h2 id="petugas-GETapi-petugas-pelaporan-terbaru">Get Laporan Terbaru</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-petugas-pelaporan-terbaru">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/petugas/pelaporan/terbaru" \
+    --header "Authorization: Bearer {token}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/petugas/pelaporan/terbaru"
+);
+
+const headers = {
+    "Authorization": "Bearer {token}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-petugas-pelaporan-terbaru">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-petugas-pelaporan-terbaru" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-petugas-pelaporan-terbaru"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-petugas-pelaporan-terbaru"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-petugas-pelaporan-terbaru" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-petugas-pelaporan-terbaru">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-petugas-pelaporan-terbaru" data-method="GET"
+      data-path="api/petugas/pelaporan/terbaru"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-petugas-pelaporan-terbaru', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-petugas-pelaporan-terbaru"
+                    onclick="tryItOut('GETapi-petugas-pelaporan-terbaru');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-petugas-pelaporan-terbaru"
+                    onclick="cancelTryOut('GETapi-petugas-pelaporan-terbaru');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-petugas-pelaporan-terbaru"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/petugas/pelaporan/terbaru</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-petugas-pelaporan-terbaru"
+               value="Bearer {token}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {token}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-petugas-pelaporan-terbaru"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-petugas-pelaporan-terbaru"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        </form>
+
+                    <h2 id="petugas-GETapi-petugas-pelaporan-riwayat">Get Riwayat Laporan</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-petugas-pelaporan-riwayat">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/petugas/pelaporan/riwayat?is_paginate=&amp;per_page=14&amp;status=quaerat&amp;wilayah_id=10&amp;unit_id=13&amp;search=atque" \
+    --header "Authorization: Bearer {token}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/petugas/pelaporan/riwayat"
+);
+
+const params = {
+    "is_paginate": "0",
+    "per_page": "14",
+    "status": "quaerat",
+    "wilayah_id": "10",
+    "unit_id": "13",
+    "search": "atque",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
+const headers = {
+    "Authorization": "Bearer {token}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-petugas-pelaporan-riwayat">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-petugas-pelaporan-riwayat" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-petugas-pelaporan-riwayat"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-petugas-pelaporan-riwayat"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-petugas-pelaporan-riwayat" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-petugas-pelaporan-riwayat">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-petugas-pelaporan-riwayat" data-method="GET"
+      data-path="api/petugas/pelaporan/riwayat"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-petugas-pelaporan-riwayat', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-petugas-pelaporan-riwayat"
+                    onclick="tryItOut('GETapi-petugas-pelaporan-riwayat');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-petugas-pelaporan-riwayat"
+                    onclick="cancelTryOut('GETapi-petugas-pelaporan-riwayat');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-petugas-pelaporan-riwayat"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/petugas/pelaporan/riwayat</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-petugas-pelaporan-riwayat"
+               value="Bearer {token}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {token}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-petugas-pelaporan-riwayat"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-petugas-pelaporan-riwayat"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>is_paginate</code></b>&nbsp;&nbsp;
+<small>boolean</small>&nbsp;
+<i>optional</i> &nbsp;
+                <label data-endpoint="GETapi-petugas-pelaporan-riwayat" style="display: none">
+            <input type="radio" name="is_paginate"
+                   value="1"
+                   data-endpoint="GETapi-petugas-pelaporan-riwayat"
+                   data-component="query"             >
+            <code>true</code>
+        </label>
+        <label data-endpoint="GETapi-petugas-pelaporan-riwayat" style="display: none">
+            <input type="radio" name="is_paginate"
+                   value="0"
+                   data-endpoint="GETapi-petugas-pelaporan-riwayat"
+                   data-component="query"             >
+            <code>false</code>
+        </label>
+    <br>
+<p>default 0 Example: <code>false</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="per_page"                data-endpoint="GETapi-petugas-pelaporan-riwayat"
+               value="14"
+               data-component="query">
+    <br>
+<p>default 10 Example: <code>14</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="status"                data-endpoint="GETapi-petugas-pelaporan-riwayat"
+               value="quaerat"
+               data-component="query">
+    <br>
+<p>default received Example: <code>quaerat</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>wilayah_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="wilayah_id"                data-endpoint="GETapi-petugas-pelaporan-riwayat"
+               value="10"
+               data-component="query">
+    <br>
+<p>default null Example: <code>10</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>unit_id</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="unit_id"                data-endpoint="GETapi-petugas-pelaporan-riwayat"
+               value="13"
+               data-component="query">
+    <br>
+<p>default null Example: <code>13</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>search</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="search"                data-endpoint="GETapi-petugas-pelaporan-riwayat"
+               value="atque"
+               data-component="query">
+    <br>
+<p>default null Example: <code>atque</code></p>
+            </div>
+                </form>
+
+                    <h2 id="petugas-GETapi-petugas-pelaporan--id_laporan-">Get Detail Laporan</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-petugas-pelaporan--id_laporan-">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/petugas/pelaporan/1" \
+    --header "Authorization: Bearer {token}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/petugas/pelaporan/1"
+);
+
+const headers = {
+    "Authorization": "Bearer {token}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-petugas-pelaporan--id_laporan-">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-petugas-pelaporan--id_laporan-" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-petugas-pelaporan--id_laporan-"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-petugas-pelaporan--id_laporan-"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-petugas-pelaporan--id_laporan-" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-petugas-pelaporan--id_laporan-">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-petugas-pelaporan--id_laporan-" data-method="GET"
+      data-path="api/petugas/pelaporan/{id_laporan}"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-petugas-pelaporan--id_laporan-', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-petugas-pelaporan--id_laporan-"
+                    onclick="tryItOut('GETapi-petugas-pelaporan--id_laporan-');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-petugas-pelaporan--id_laporan-"
+                    onclick="cancelTryOut('GETapi-petugas-pelaporan--id_laporan-');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-petugas-pelaporan--id_laporan-"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/petugas/pelaporan/{id_laporan}</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-petugas-pelaporan--id_laporan-"
+               value="Bearer {token}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {token}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-petugas-pelaporan--id_laporan-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-petugas-pelaporan--id_laporan-"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id_laporan</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="id_laporan"                data-endpoint="GETapi-petugas-pelaporan--id_laporan-"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the Laporan. Example: <code>1</code></p>
+            </div>
+                    </form>
+
+                    <h2 id="petugas-PATCHapi-petugas-pelaporan--id_laporan--status">Update Laporan</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-PATCHapi-petugas-pelaporan--id_laporan--status">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request PATCH \
+    "http://localhost:8000/api/petugas/pelaporan/1/status" \
+    --header "Authorization: Bearer {token}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json" \
+    --data "{
+    \"status\": \"in_progress\"
+}"
+</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/petugas/pelaporan/1/status"
+);
+
+const headers = {
+    "Authorization": "Bearer {token}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "status": "in_progress"
+};
+
+fetch(url, {
+    method: "PATCH",
+    headers,
+    body: JSON.stringify(body),
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-PATCHapi-petugas-pelaporan--id_laporan--status">
+</span>
+<span id="execution-results-PATCHapi-petugas-pelaporan--id_laporan--status" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-PATCHapi-petugas-pelaporan--id_laporan--status"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-PATCHapi-petugas-pelaporan--id_laporan--status"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-PATCHapi-petugas-pelaporan--id_laporan--status" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-PATCHapi-petugas-pelaporan--id_laporan--status">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-PATCHapi-petugas-pelaporan--id_laporan--status" data-method="PATCH"
+      data-path="api/petugas/pelaporan/{id_laporan}/status"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('PATCHapi-petugas-pelaporan--id_laporan--status', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-PATCHapi-petugas-pelaporan--id_laporan--status"
+                    onclick="tryItOut('PATCHapi-petugas-pelaporan--id_laporan--status');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-PATCHapi-petugas-pelaporan--id_laporan--status"
+                    onclick="cancelTryOut('PATCHapi-petugas-pelaporan--id_laporan--status');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-PATCHapi-petugas-pelaporan--id_laporan--status"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-purple">PATCH</small>
+            <b><code>api/petugas/pelaporan/{id_laporan}/status</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="PATCHapi-petugas-pelaporan--id_laporan--status"
+               value="Bearer {token}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {token}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="PATCHapi-petugas-pelaporan--id_laporan--status"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="PATCHapi-petugas-pelaporan--id_laporan--status"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                        <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
+                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>id_laporan</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="id_laporan"                data-endpoint="PATCHapi-petugas-pelaporan--id_laporan--status"
+               value="1"
+               data-component="url">
+    <br>
+<p>The ID of the Laporan. Example: <code>1</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+        <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>unit_id</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="unit_id"                data-endpoint="PATCHapi-petugas-pelaporan--id_laporan--status"
+               value=""
+               data-component="body">
+    <br>
+<p>The <code>id</code> of an existing record in the unit_pemadam table.</p>
+        </div>
+                <div style=" padding-left: 28px;  clear: unset;">
+            <b style="line-height: 2;"><code>status</code></b>&nbsp;&nbsp;
+<small>string</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="text" style="display: none"
+                              name="status"                data-endpoint="PATCHapi-petugas-pelaporan--id_laporan--status"
+               value="in_progress"
+               data-component="body">
+    <br>
+<p>Example: <code>in_progress</code></p>
+Must be one of:
+<ul style="list-style-type: square;"><li><code>received</code></li> <li><code>in_progress</code></li> <li><code>dispatched</code></li> <li><code>completed</code></li></ul>
+        </div>
+        </form>
+
+                    <h2 id="petugas-GETapi-petugas-wilayah">Get Wilayah</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-petugas-wilayah">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/petugas/wilayah?is_paginate=&amp;per_page=19" \
+    --header "Authorization: Bearer {token}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/petugas/wilayah"
+);
+
+const params = {
+    "is_paginate": "0",
+    "per_page": "19",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
+const headers = {
+    "Authorization": "Bearer {token}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-petugas-wilayah">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-petugas-wilayah" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-petugas-wilayah"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-petugas-wilayah"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-petugas-wilayah" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-petugas-wilayah">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-petugas-wilayah" data-method="GET"
+      data-path="api/petugas/wilayah"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-petugas-wilayah', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-petugas-wilayah"
+                    onclick="tryItOut('GETapi-petugas-wilayah');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-petugas-wilayah"
+                    onclick="cancelTryOut('GETapi-petugas-wilayah');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-petugas-wilayah"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/petugas/wilayah</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-petugas-wilayah"
+               value="Bearer {token}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {token}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-petugas-wilayah"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-petugas-wilayah"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>is_paginate</code></b>&nbsp;&nbsp;
+<small>boolean</small>&nbsp;
+<i>optional</i> &nbsp;
+                <label data-endpoint="GETapi-petugas-wilayah" style="display: none">
+            <input type="radio" name="is_paginate"
+                   value="1"
+                   data-endpoint="GETapi-petugas-wilayah"
+                   data-component="query"             >
+            <code>true</code>
+        </label>
+        <label data-endpoint="GETapi-petugas-wilayah" style="display: none">
+            <input type="radio" name="is_paginate"
+                   value="0"
+                   data-endpoint="GETapi-petugas-wilayah"
+                   data-component="query"             >
+            <code>false</code>
+        </label>
+    <br>
+<p>default 0 Example: <code>false</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="per_page"                data-endpoint="GETapi-petugas-wilayah"
+               value="19"
+               data-component="query">
+    <br>
+<p>default 10 Example: <code>19</code></p>
+            </div>
+                </form>
+
+                    <h2 id="petugas-GETapi-petugas-unit">Get Unit</h2>
+
+<p>
+<small class="badge badge-darkred">requires authentication</small>
+</p>
+
+
+
+<span id="example-requests-GETapi-petugas-unit">
+<blockquote>Example request:</blockquote>
+
+
+<div class="bash-example">
+    <pre><code class="language-bash">curl --request GET \
+    --get "http://localhost:8000/api/petugas/unit?is_paginate=&amp;per_page=16" \
+    --header "Authorization: Bearer {token}" \
+    --header "Content-Type: application/json" \
+    --header "Accept: application/json"</code></pre></div>
+
+
+<div class="javascript-example">
+    <pre><code class="language-javascript">const url = new URL(
+    "http://localhost:8000/api/petugas/unit"
+);
+
+const params = {
+    "is_paginate": "0",
+    "per_page": "16",
+};
+Object.keys(params)
+    .forEach(key =&gt; url.searchParams.append(key, params[key]));
+
+const headers = {
+    "Authorization": "Bearer {token}",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre></div>
+
+</span>
+
+<span id="example-responses-GETapi-petugas-unit">
+            <blockquote>
+            <p>Example response (401):</p>
+        </blockquote>
+                <details class="annotation">
+            <summary style="cursor: pointer;">
+                <small onclick="textContent = parentElement.parentElement.open ? 'Show headers' : 'Hide headers'">Show headers</small>
+            </summary>
+            <pre><code class="language-http">cache-control: no-cache, private
+content-type: application/json
+access-control-allow-origin: *
+ </code></pre></details>         <pre>
+
+<code class="language-json" style="max-height: 300px;">{
+    &quot;message&quot;: &quot;Unauthenticated.&quot;
+}</code>
+ </pre>
+    </span>
+<span id="execution-results-GETapi-petugas-unit" hidden>
+    <blockquote>Received response<span
+                id="execution-response-status-GETapi-petugas-unit"></span>:
+    </blockquote>
+    <pre class="json"><code id="execution-response-content-GETapi-petugas-unit"
+      data-empty-response-text="<Empty response>" style="max-height: 400px;"></code></pre>
+</span>
+<span id="execution-error-GETapi-petugas-unit" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETapi-petugas-unit">
+
+Tip: Check that you&#039;re properly connected to the network.
+If you&#039;re a maintainer of ths API, verify that your API is running and you&#039;ve enabled CORS.
+You can check the Dev Tools console for debugging information.</code></pre>
+</span>
+<form id="form-GETapi-petugas-unit" data-method="GET"
+      data-path="api/petugas/unit"
+      data-authed="1"
+      data-hasfiles="0"
+      data-isarraybody="0"
+      autocomplete="off"
+      onsubmit="event.preventDefault(); executeTryOut('GETapi-petugas-unit', this);">
+    <h3>
+        Request&nbsp;&nbsp;&nbsp;
+                    <button type="button"
+                    style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-tryout-GETapi-petugas-unit"
+                    onclick="tryItOut('GETapi-petugas-unit');">Try it out ⚡
+            </button>
+            <button type="button"
+                    style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-canceltryout-GETapi-petugas-unit"
+                    onclick="cancelTryOut('GETapi-petugas-unit');" hidden>Cancel 🛑
+            </button>&nbsp;&nbsp;
+            <button type="submit"
+                    style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;"
+                    id="btn-executetryout-GETapi-petugas-unit"
+                    data-initial-text="Send Request 💥"
+                    data-loading-text="⏱ Sending..."
+                    hidden>Send Request 💥
+            </button>
+            </h3>
+            <p>
+            <small class="badge badge-green">GET</small>
+            <b><code>api/petugas/unit</code></b>
+        </p>
+                <h4 class="fancy-heading-panel"><b>Headers</b></h4>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Authorization</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Authorization" class="auth-value"               data-endpoint="GETapi-petugas-unit"
+               value="Bearer {token}"
+               data-component="header">
+    <br>
+<p>Example: <code>Bearer {token}</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Content-Type</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Content-Type"                data-endpoint="GETapi-petugas-unit"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                                <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>Accept</code></b>&nbsp;&nbsp;
+&nbsp;
+ &nbsp;
+                <input type="text" style="display: none"
+                              name="Accept"                data-endpoint="GETapi-petugas-unit"
+               value="application/json"
+               data-component="header">
+    <br>
+<p>Example: <code>application/json</code></p>
+            </div>
+                            <h4 class="fancy-heading-panel"><b>Query Parameters</b></h4>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>is_paginate</code></b>&nbsp;&nbsp;
+<small>boolean</small>&nbsp;
+<i>optional</i> &nbsp;
+                <label data-endpoint="GETapi-petugas-unit" style="display: none">
+            <input type="radio" name="is_paginate"
+                   value="1"
+                   data-endpoint="GETapi-petugas-unit"
+                   data-component="query"             >
+            <code>true</code>
+        </label>
+        <label data-endpoint="GETapi-petugas-unit" style="display: none">
+            <input type="radio" name="is_paginate"
+                   value="0"
+                   data-endpoint="GETapi-petugas-unit"
+                   data-component="query"             >
+            <code>false</code>
+        </label>
+    <br>
+<p>default 0 Example: <code>false</code></p>
+            </div>
+                                    <div style="padding-left: 28px; clear: unset;">
+                <b style="line-height: 2;"><code>per_page</code></b>&nbsp;&nbsp;
+<small>integer</small>&nbsp;
+<i>optional</i> &nbsp;
+                <input type="number" style="display: none"
+               step="any"               name="per_page"                data-endpoint="GETapi-petugas-unit"
+               value="16"
+               data-component="query">
+    <br>
+<p>default 10 Example: <code>16</code></p>
+            </div>
+                </form>
 
             
 

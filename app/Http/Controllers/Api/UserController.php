@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\Helpers\ResponseHelper;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UpdatePetugasRequest;
+use App\Http\Requests\UpdateUserProfileRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Http\Resources\UserResource;
 use App\Service\UserService;
@@ -20,6 +21,10 @@ class UserController extends Controller
         $this->userService = $userService;
     }
 
+     /**
+     * Get Profil Pelapor
+     * @group Pelapor
+     */
     public function getProfile()
     {
         try{
@@ -32,8 +37,11 @@ class UserController extends Controller
         }
     }
 
-
-    public function updateProfile(UpdateUserRequest $request)
+     /**
+     * Update Profil Pelapor
+     * @group Pelapor
+     */
+    public function updateProfile(UpdateUserProfileRequest $request)
     {
         try{
             $validated = $request->validated();

@@ -41,7 +41,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - Zcdf8e13E6b5avhPaDV6k4g
+      - aE5cvke631DfaPgbZ8Vhd46
     controller: null
     method: null
     route: null
@@ -72,7 +72,7 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: consequuntur
+        example: mollitia
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -82,17 +82,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: mpadberg@example.com
-        type: string
-        enumValues: []
-        exampleWasSpecified: false
-        nullable: false
-        custom: []
-      wilayah_id:
-        name: wilayah_id
-        description: ''
-        required: true
-        example: dolorem
+        example: bveum@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -119,9 +109,8 @@ endpoints:
         nullable: false
         custom: []
     cleanBodyParameters:
-      name: consequuntur
-      email: mpadberg@example.com
-      wilayah_id: dolorem
+      name: mollitia
+      email: bveum@example.org
     fileParameters:
       foto_profil: null
     responses: []
@@ -129,7 +118,413 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - dV64g6be1fPcDhkaZ5E3v8a
+      - b3fak8e6aVEDP5164hcdZgv
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/petugas/pelaporan/terbaru
+    metadata:
+      groupName: Petugas
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get Laporan Terbaru'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - a6d6fgk854hZPDc3av1ebVE
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/petugas/pelaporan/riwayat
+    metadata:
+      groupName: Petugas
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get Riwayat Laporan'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      is_paginate:
+        name: is_paginate
+        description: 'default 0'
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      per_page:
+        name: per_page
+        description: 'default 10'
+        required: false
+        example: 14
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      status:
+        name: status
+        description: 'default received'
+        required: false
+        example: quaerat
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      wilayah_id:
+        name: wilayah_id
+        description: 'default null'
+        required: false
+        example: 10
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      unit_id:
+        name: unit_id
+        description: 'default null'
+        required: false
+        example: 13
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      search:
+        name: search
+        description: 'default null'
+        required: false
+        example: atque
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      is_paginate: false
+      per_page: 14
+      status: quaerat
+      wilayah_id: 10
+      unit_id: 13
+      search: atque
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - ebPkhDE663c4f8agvZ5Vd1a
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/petugas/pelaporan/{id_laporan}'
+    metadata:
+      groupName: Petugas
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get Detail Laporan'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id_laporan:
+        name: id_laporan
+        description: 'The ID of the Laporan.'
+        required: true
+        example: '1'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id_laporan: '1'
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - c68hE6kVaP5D1fdb34Zevag
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - PATCH
+    uri: 'api/petugas/pelaporan/{id_laporan}/status'
+    metadata:
+      groupName: Petugas
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Update Laporan'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id_laporan:
+        name: id_laporan
+        description: 'The ID of the Laporan.'
+        required: true
+        example: '1'
+        type: string
+        enumValues: []
+        exampleWasSpecified: true
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id_laporan: '1'
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      unit_id:
+        name: unit_id
+        description: 'The <code>id</code> of an existing record in the unit_pemadam table.'
+        required: false
+        example: null
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      status:
+        name: status
+        description: ''
+        required: false
+        example: in_progress
+        type: string
+        enumValues:
+          - received
+          - in_progress
+          - dispatched
+          - completed
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanBodyParameters:
+      status: in_progress
+    fileParameters: []
+    responses: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 5P6dDf3bg4EaekaVch6Zv18
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/petugas/wilayah
+    metadata:
+      groupName: Petugas
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get Wilayah'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      is_paginate:
+        name: is_paginate
+        description: 'default 0'
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      per_page:
+        name: per_page
+        description: 'default 10'
+        required: false
+        example: 19
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      is_paginate: false
+      per_page: 19
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - VacbgvDkPdhe36af15Z6E48
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: api/petugas/unit
+    metadata:
+      groupName: Petugas
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Get Unit'
+      description: ''
+      authenticated: true
+      custom: []
+    headers:
+      Authorization: 'Bearer {token}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      is_paginate:
+        name: is_paginate
+        description: 'default 0'
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+      per_page:
+        name: per_page
+        description: 'default 10'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanQueryParameters:
+      is_paginate: false
+      per_page: 16
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 401
+        content: '{"message":"Unauthenticated."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          access-control-allow-origin: '*'
+        description: null
+        custom: []
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - fcP8Z6v6VDa41hk5gebdaE3
     controller: null
     method: null
     route: null

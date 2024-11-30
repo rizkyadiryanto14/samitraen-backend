@@ -25,7 +25,7 @@
         <div class="nav-tabs-top">
             <div class="tab-content">
                 <div class="tab-pane fade show active" id="sale-stats">
-                    <div style="height: 330px" id="tab-table-1" class="ps ps--active-x ps--active-y">
+                    <div  id="tab-table-1" class="ps ps--active-x ps--active-y">
                         <table class="table table-hover card-table">
                             <thead>
                                 <tr>
